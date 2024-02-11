@@ -55,7 +55,7 @@
   --key-delete: hsl(268, 47%, 21%);
   --shadow-delete: hsl(290, 70%, 36%);
 
-  --main-text: hsl(60, 25%, 25%);
+  --main-text: hsl(52, 100%, 62%, 1);
   --secondary-text: hsl(0, 0%, 100%);
 
   --header-texts: hsla(52, 100%, 62%, 1);
@@ -157,28 +157,24 @@ input[type="range"]::-webkit-slider-thumb {
   background: var(--screen-background);
   border-radius: 10px;
   width: 279px;
-  height: 88px;
+  height: 70px;
   margin: 32px 0 24px 0;
   display: flex;
   flex-direction: column;
   align-items: end;
+  justify-content: center;
   padding: 0 24px;
 }
 
 .result_p {
-  font-size: 40px;
-  line-height: 37px;
+  font-size: 32px;
+
   text-align: right;
   letter-spacing: -0.666667px;
   color: var(--header-texts);
   max-width: 100%;
   margin-top: 12px;
   overflow: hidden;
-}
-.opacy {
-  opacity: 0.3;
-  font-size: 16px;
-  line-height: 17px;
 }
 
 /* Calculator numbers and operations part */
@@ -210,7 +206,7 @@ input[type="range"]::-webkit-slider-thumb {
   text-align: center;
   justify-content: center;
   letter-spacing: -0.533333px;
-  color: var(--header-texts);
+  color: var(--main-text);
   border-width: 0px;
 }
 .del {
