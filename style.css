@@ -16,6 +16,8 @@
 
   --main-text: hsl(221, 14%, 31%);
   --secondary-text: hsl(0, 0%, 100%);
+
+  --header-texts: hsla(0, 0%, 100%, 1);
 }
 
 [data-theme="light"] {
@@ -34,6 +36,8 @@
 
   --main-text: hsl(60, 10%, 19%);
   --secondary-text: hsl(0, 0%, 100%);
+
+  --header--texts: hsla(60, 10%, 19%, 1);
 }
 
 [data-theme="special"] {
@@ -44,12 +48,102 @@
   --key-background1: hsl(281, 89%, 26%);
   --key-shadow1: hsl(285, 91%, 52%);
 
-  --key-background2: hsl(176, 100%, 44%);
-  --key-shadow2: hsl(177, 92%, 70%);
+  --key-equality: hsl(176, 100%, 44%);
+  --shadow-equality: hsl(177, 92%, 70%);
 
-  --key-background3: hsl(268, 47%, 21%);
-  --key-shadow3: hsl(290, 70%, 36%);
+  --key-delete: hsl(268, 47%, 21%);
+  --shadow-delete: hsl(290, 70%, 36%);
 
-  --main-text: hsl(60, 10%, 19%);
+  --main-text: hsl(60, 25%, 25%);
   --secondary-text: hsl(0, 0%, 100%);
+
+  --header-texts: hsla(52, 100%, 62%, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: "League Spartan", sans-serif;
+  background-color: var(--main-background);
+}
+
+header {
+  display: flex;
+}
+
+button {
+  cursor: pointer;
+}
+.header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 320px;
+  user-select: none;
+  color: var(--header-texts);
+}
+.theme {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.align_end {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.theme_numbers {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 8px 0 8px;
+}
+.t_num {
+  font-size: 12px;
+  line-height: 11px;
+  text-align: center;
+}
+.name {
+  font-size: 32px;
+  line-height: 29px;
+  text-align: center;
+  letter-spacing: -0.533333px;
+}
+.t_name {
+  font-size: 12px;
+  line-height: 11px;
+  text-align: center;
+  letter-spacing: 1px;
+  /* color: ; */
+  margin-right: 26px;
+}
+input[type="range"] {
+  -webkit-appearance: none;
+  height: 20px;
+  background: #242d44;
+  border-radius: 13px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  outline: none;
+  margin: 0px;
+  width: 64px;
+  margin-top: 5px;
+  padding: 0 3px 0 3px;
+  cursor: pointer;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  background: var(--thumb-background-color, #d03f2f);
+  border-radius: 50%;
 }
