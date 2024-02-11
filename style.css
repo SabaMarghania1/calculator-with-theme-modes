@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap");
 
+@import url(reset.css);
 :root {
   --main-background: hsl(222, 26%, 31%);
   --keypad-background: hsl(223, 31%, 20%);
@@ -63,17 +64,20 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 body {
+  font-family: "League Spartan", sans-serif;
+  font-weight: 700;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  background: var(--main-background);
+  height: 100%;
   min-height: 100vh;
-  font-family: "League Spartan", sans-serif;
-  background-color: var(--main-background);
+  width: 100vw;
+  min-width: 100%;
 }
 
 header {
@@ -123,13 +127,12 @@ button {
   line-height: 11px;
   text-align: center;
   letter-spacing: 1px;
-  /* color: ; */
   margin-right: 26px;
 }
 input[type="range"] {
   -webkit-appearance: none;
   height: 20px;
-  background: #242d44;
+  background: var(--keypad-background);
   border-radius: 13px;
   background-repeat: no-repeat;
   overflow: hidden;
@@ -144,6 +147,36 @@ input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   width: 16px;
   height: 16px;
-  background: var(--thumb-background-color, #d03f2f);
+  background: var(--key-background2);
   border-radius: 50%;
+}
+
+/* Calculator content */
+
+.result {
+  background: #181f33;
+  border-radius: 10px;
+  width: 279px;
+  height: 88px;
+  margin: 32px 0 24px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  padding: 0 24px;
+}
+
+.result_p {
+  font-size: 40px;
+  line-height: 37px;
+  text-align: right;
+  letter-spacing: -0.666667px;
+  color: var(--header-texts);
+  max-width: 100%;
+  margin-top: 12px;
+  overflow: hidden;
+}
+.opacy {
+  opacity: 0.3;
+  font-size: 16px;
+  line-height: 17px;
 }
